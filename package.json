@@ -1,0 +1,23 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidenybai/www.git"
+  },
+  "author": "Aiden Bai <hello@aidenybai.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aidenybai/www/issues"
+  },
+  "homepage": "https://github.com/aidenybai/www#readme",
+  "devDependencies": {
+    "vite": "^2.5.1"
+  }
+}
