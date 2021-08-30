@@ -1,0 +1,31 @@
+body {
+  font-size: 2rem;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.counter {
+  margin-right: 3rem !important;
+  color: black;
+}
+
+.word {
+  margin: 0.25rem;
+  color: grey;
+}
+
+.typed {
+  color: black;
+}
+
+.cursor-end {
+  margin-left: -0.6rem;
+}
+
+.cursor {
+  border-left: 2px solid black;
+}
