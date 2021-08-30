@@ -7,13 +7,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding-top: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .counter {
-  margin-top: 3rem !important;
-  color: black;
+  margin-left: 3rem;
+  color: black !important;
 }
 
 .word {
@@ -23,10 +23,6 @@ body {
 
 .typed {
   color: black;
-}
-
-.cursor-end {
-  margin-left: -0.25rem;
 }
 
 .cursor {

@@ -7,6 +7,7 @@ const text =
 
 let numberOfWordsTyped = 0;
 let charactersTyped = 0;
+let time: number;
 
 const el = createElement(<div className="content"></div>);
 
@@ -57,13 +58,17 @@ const paintWords = () => {
       })}
       {numberOfWordsTyped === text.length - 1 &&
       charactersTyped === text[numberOfWordsTyped].length ? (
-        <span className="cursor cursor-end"></span>
+        <span className="word cursor"></span>
       ) : (
         ''
       )}
-      <span className="word counter">
-        {charactersTyped}:{numberOfWordsTyped}
-      </span>
+      <div className="word counter">
+        {charactersTyped}:{numberOfWordsTyped} -{' '}
+        {Math.round(
+          numberOfWordsTyped / ((performance.now() - time) / 1000 / 60)
+        )}{' '}
+        wpm
+      </div>
     </div>
   );
 };
@@ -91,6 +96,7 @@ const check = () => {
 };
 
 document.addEventListener('keydown', (event: KeyboardEvent) => {
+  if (!time) time = performance.now();
   check();
   if (
     event.key.toLowerCase() ===
@@ -102,7 +108,7 @@ document.addEventListener('keydown', (event: KeyboardEvent) => {
     charactersTyped--;
   }
   check();
-  paintWords();
+  if (event.key.length === 1) paintWords();
 });
 
 // window.addEventListener('DOMContentLoaded', () => {
