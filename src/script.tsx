@@ -113,5 +113,6 @@ document.addEventListener('keydown', (event: KeyboardEvent) => {
 
 // window.addEventListener('DOMContentLoaded', () => {
 paintWords();
+document.body.innerHTML = '';
 document.body.appendChild(el);
 // });
