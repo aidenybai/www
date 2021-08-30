@@ -56,7 +56,7 @@ const paintWords = () => {
         return createWord(word, typed, needsCursor, charactersTyped);
       })}
       {numberOfWordsTyped === text.length - 1 &&
-        charactersTyped === text[numberOfWordsTyped].length ? (
+      charactersTyped === text[numberOfWordsTyped].length ? (
         <span className="cursor cursor-end"></span>
       ) : (
         ''
@@ -105,7 +105,7 @@ document.addEventListener('keydown', (event: KeyboardEvent) => {
   paintWords();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   paintWords();
   document.body.appendChild(el);
-})
+});
