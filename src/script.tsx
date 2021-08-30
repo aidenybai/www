@@ -105,7 +105,7 @@ document.addEventListener('keydown', (event: KeyboardEvent) => {
   paintWords();
 });
 
-// window.addEventListener('DOMContentLoaded', () => {
-paintWords();
-document.body.appendChild(el);
-// });
+window.addEventListener('DOMContentLoaded', () => {
+  paintWords();
+  document.body.appendChild(el);
+});
