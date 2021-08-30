@@ -1,10 +1,9 @@
 import { createElement, patch, className } from 'million';
 
-const text = `hiyo! my name is aiden
-
-`
-  .trim()
-  .split(/\s+/gim);
+const text =
+  `hiyo, my name is aiden! im a student webdev working on open source and research. check out my work @ github.com/aidenybai`
+    .trim()
+    .split(/\s+/gim);
 let numberOfWordsTyped = 0;
 let charactersTyped = 0;
 
@@ -28,7 +27,7 @@ const createWord = (
           if (charCursor) cursorLock = true;
           return (
             <span
-              // key={i}
+              // key={`${char}${i}`}
               className={className({
                 typed: charTyped && cursor,
                 cursor: charCursor && cursor,
@@ -48,7 +47,6 @@ const paintWords = () => {
   patch(
     el,
     <div className="content">
-      <span className="word counter">{numberOfWordsTyped}</span>
       {text.map((word: string, i: number) => {
         const typed = i < numberOfWordsTyped;
         const needsCursor = !typed && !cursorLock;
@@ -62,6 +60,9 @@ const paintWords = () => {
       ) : (
         ''
       )}
+      <span className="word counter">
+        {charactersTyped}:{numberOfWordsTyped}
+      </span>
     </div>
   );
 };

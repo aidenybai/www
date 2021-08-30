@@ -6,10 +6,13 @@ body {
 .content {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .counter {
-  margin-right: 3rem !important;
+  margin-top: 3rem !important;
   color: black;
 }
 
@@ -23,7 +26,7 @@ body {
 }
 
 .cursor-end {
-  margin-left: -0.6rem;
+  margin-left: -0.25rem;
 }
 
 .cursor {
