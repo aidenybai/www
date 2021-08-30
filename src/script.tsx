@@ -4,6 +4,7 @@ const text =
   `hiyo, my name is aiden! im a student webdev working on open source and research. check out my work @ github.com/aidenybai`
     .trim()
     .split(/\s+/gim);
+
 let numberOfWordsTyped = 0;
 let charactersTyped = 0;
 
@@ -55,7 +56,7 @@ const paintWords = () => {
         return createWord(word, typed, needsCursor, charactersTyped);
       })}
       {numberOfWordsTyped === text.length - 1 &&
-      charactersTyped === text[numberOfWordsTyped].length ? (
+        charactersTyped === text[numberOfWordsTyped].length ? (
         <span className="cursor cursor-end"></span>
       ) : (
         ''
@@ -66,10 +67,6 @@ const paintWords = () => {
     </div>
   );
 };
-
-paintWords();
-
-document.body.appendChild(el);
 
 const check = () => {
   if (charactersTyped >= text[numberOfWordsTyped].length) {
@@ -107,3 +104,8 @@ document.addEventListener('keydown', (event: KeyboardEvent) => {
   check();
   paintWords();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  paintWords();
+  document.body.appendChild(el);
+})
