@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/aidenybai/www#readme",
   "devDependencies": {
-    "vite": "^2.5.1",
-    "vite-plugin-html": "^2.1.0",
-    "vite-plugin-singlefile": "^0.5.1"
+    "vite": "^2.5.1"
   },
   "dependencies": {
     "million": "^0.4.1"
